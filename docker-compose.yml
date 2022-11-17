@@ -1,0 +1,12 @@
+version: "3.2"
+services:
+  mongo-db:
+    build: ./mongo-init
+    restart: always
+    ports:
+      - 27017:27017
+    container_name: mongo-db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=test
+      - MONGO_INITDB_ROOT_PASSWORD=test
+      - MONGO_INITDB_DATABASE=test-db
